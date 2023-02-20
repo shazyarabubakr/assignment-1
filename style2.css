@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+body {
+  margin: 4%;
+  background-image: linear-gradient(
+      rgba(129, 127, 127, 0.5),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(images/logo4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+header {
+  margin: 40px auto;
+  border-bottom: 1px solid #bbc7c7;
+  max-width: 1200px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-radius: 20px solid black;
+}
+.card {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  background-color: #f6f6f6;
+  border: 2px solid rgb(167, 152, 152);
+  border-radius: 1rem;
+}
+
+.cards figure img {
+  height: 200px;
+  border-radius: 1rem;
+  width: 100%;
+  object-fit: fill;
+}
+.card1 {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #bbc7c7;
+  padding-bottom: 40px;
+}
+article p,
+article h3 {
+  margin: 20px 10px;
+}
+h1 {
+  color: white;
+}
+@media screen and (max-width: 980px) {
+  article {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 760px) {
+  article,
+  .card1 {
+    display: block;
+    margin: 0 20px;
+  }
+}
